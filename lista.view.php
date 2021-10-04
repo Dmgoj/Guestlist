@@ -11,14 +11,15 @@
    <table>
        <th>ID</th><th>IME</th><th>PREZIME</th><th>SPOL</th><th>VRIJEME PRIJAVE</th>
        <?php foreach ($results as $result) { ?>
-    <tr>
+        <tr>
         <td><?php echo $result['id']; ?></td>
         <td><?php echo $result['first_name']; ?></td>
         <td><?php echo $result['last_name']; ?></td>
         <td><?php echo $result['sex']; ?></td>
-        <td><?php echo $result['date']; ?></td>
-    <tr>
-<?php } ?>
+        <td><?php echo $result['date']; ?></td> 
+        <tr>
+        <?php } ?>
    </table>
 </body>
 </html>
+

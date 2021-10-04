@@ -1,21 +1,15 @@
 <?php
-/*
-$firstname=$_POST['fname'];
-$lastname=$_POST['lname'];
-$spol=$_POST['spol'];
-
-$user=$firstname. ' ' . $lastname.'('.$spol.')';
-*/
-require 'functions.php';
-
-$pdo=connectDb();
+require 'Database.php';
+//require 'functions.php';
+$connection = new Database();
+$pdo=$connection->connectDb();
 
 // Insert into Database
-$insert=insertToDb($pdo);
+$insert=$connection->insertToDb($pdo);
 
 
-// Select All za prikaz
-$select_all=selectAll($pdo);
+// Select All 
+$results=$connection->selectAll($pdo);
 
 require 'view.php';
 ?>

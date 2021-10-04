@@ -1,13 +1,16 @@
 <?php
 
-// Database connection
-function connectDb(){
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
+class Database{
+    private $servername = "localhost";
+    private $username = "root";
+    private $password = "";
+    
+    // Database connection
+public function connectDb(){
+    
     
     try {
-       return $pdo=new PDO("mysql:host=$servername;dbname=Guestlist;charset=utf8mb4", $username, $password);
+       return $pdo=new PDO("mysql:host=$this->servername;dbname=Guestlist;charset=utf8mb4", $this->username, $this->password);
         // set the PDO error mode to exception
        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully </br>";
@@ -16,9 +19,7 @@ function connectDb(){
       } catch(PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
       }
-
 }
-
 
 // Insert into DB
 function insertToDb($pdo){
@@ -45,8 +46,6 @@ function selectAll($pdo){
    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 }
-
-
-
+}
 
 ?>
