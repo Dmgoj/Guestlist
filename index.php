@@ -1,15 +1,23 @@
 <?php
-require 'Database.php';
+require 'Init.php';
+
 //require 'functions.php';
 $connection = new Database();
-$pdo=$connection->connectDb();
+$connection->connectDb();
+
 
 // Insert into Database
-$insert=$connection->insertToDb($pdo);
+$insert=$connection->insertToDb();
 
 
 // Select All 
-$results=$connection->selectAll($pdo);
+$results=$connection->selectAll();
 
+// Register New User
+$user=new User($connection);
+$user->register();
+// Login
+
+$user->login();
 require 'view.php';
 ?>

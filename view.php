@@ -7,6 +7,7 @@
     <title>Guestlist</title>
 </head>
 <body>
+   <?php include "header.php"; ?>
 <!-- Lista forma 
  je upisan na listu!!! </br>
 !-->
@@ -16,16 +17,15 @@ IME:
 PREZIME:    
 <input type="text" id="lname" name="lname" placeholder="Prezime" ><br>
 SPOL:    
-
 <input type="radio" name="spol" id="spol" value="M">
-<label for="spol">Muško</label></br>
+<label for="spol">Muško</label>
 
 <input type="radio" name="spol" id="spol" value="Ž">
 <label for="spol">Žensko</label></br>
     <input type="submit" name="submit" value="Prijavi">
- 
+    <a href="lista.view.php">Prikaz liste</a>
 </form>
-
+<hr>
 
 
 

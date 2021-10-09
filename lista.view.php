@@ -8,7 +8,12 @@
 </head>
 <body>
     <?php require 'index.php'; ?>
+    <?php if(empty($user_session)){
+        header("Location:login.php");
+    }
+    ?>
    <table>
+       
        <th>ID</th><th>IME</th><th>PREZIME</th><th>SPOL</th><th>VRIJEME PRIJAVE</th>
        <?php foreach ($results as $result) { ?>
         <tr>
@@ -17,9 +22,12 @@
         <td><?php echo $result['last_name']; ?></td>
         <td><?php echo $result['sex']; ?></td>
         <td><?php echo $result['date']; ?></td> 
+        <td><button type="button" href="">DELETE</button></td>
         <tr>
         <?php } ?>
    </table>
+
+  
 </body>
 </html>
 

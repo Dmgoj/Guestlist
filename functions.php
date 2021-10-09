@@ -32,12 +32,12 @@ function insertToDb($pdo){
         
         // Redirect to View List
         header("Location:lista.view.php");
-        
+        $pdo=null;
     }
 }
 
 // Select All From DB
-function selectAll($pdo){
+function selectAll(){
         
     $stmt=$pdo->query('SELECT * FROM guestlist');
 
