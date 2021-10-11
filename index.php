@@ -16,8 +16,17 @@ $results=$connection->selectAll();
 // Register New User
 $user=new User($connection);
 $user->register();
-// Login
 
+// Login
 $user->login();
-require 'view.php';
+
+
+// Delete entry
+if(!empty($_GET['id'])){
+    $connection->deleteGuest($_GET['id']);
+    }
+
+
+    require 'view.php';
+
 ?>

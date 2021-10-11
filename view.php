@@ -23,7 +23,7 @@ SPOL:
 <input type="radio" name="spol" id="spol" value="Ž">
 <label for="spol">Žensko</label></br>
     <input type="submit" name="submit" value="Prijavi">
-    <a href="lista.view.php">Prikaz liste</a>
+    <a href="list.view.php">Prikaz liste</a>
 </form>
 <hr>
 

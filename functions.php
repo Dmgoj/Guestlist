@@ -31,7 +31,7 @@ function insertToDb($pdo){
         $pdo->query("INSERT INTO guestlist (first_name, last_name, sex) VALUES ('$firstname', '$lastname', '$spol')");
         
         // Redirect to View List
-        header("Location:lista.view.php");
+        header("Location:list.view.php");
         $pdo=null;
     }
 }

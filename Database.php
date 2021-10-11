@@ -31,7 +31,7 @@ function insertToDb(){
         $this->pdo->query("INSERT INTO guestlist (first_name, last_name, sex) VALUES ('$firstname', '$lastname', '$spol')");
         
         // Redirect to View List
-        header("Location:lista.view.php");
+        header("Location:list.view.php");
         
     }
 }
@@ -45,6 +45,14 @@ function selectAll(){
    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 }
+
+// Delete Entry
+function deleteGuest($id){
+        $stmt=$this->pdo->query("DELETE FROM guestlist WHERE id='$id'");
+        header("Refresh:0;list.view.php");
 }
+    
+}
+
 
 ?>

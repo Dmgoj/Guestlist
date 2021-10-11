@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +8,8 @@
 </head>
 <body>
 <?php include "header.php";?>
+
+
 <form action="index.php" method="post">
         <label for="email">Email:</label>
         <input type="email" name="email" id="email" placeholder="email">
