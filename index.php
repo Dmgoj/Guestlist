@@ -22,8 +22,8 @@ $user->login();
 
 
 // Delete entry
-if(!empty($_GET['id'])){
-    $connection->deleteGuest($_GET['id']);
+if(!empty($_POST['delete'])){
+    $connection->deleteGuest($_POST['delete']);
     }
 
 

@@ -28,8 +28,8 @@ if(!isset($_SESSION['user'])){
         <td><?php echo $result['last_name']; ?></td>
         <td><?php echo $result['sex']; ?></td>
         <td><?php echo $result['date']; ?></td> 
-        <td><form action="list.view.php?id=<?=$result['id']?>" method="get"><button type="submit" >DELETE</button></form></td>
-        <td><a href="list.view.php?id=<?=$result['id']?>">DEL</a></td> 
+        <td><form action="index.php" method="post"><button type="submit" name="delete" value="<?=$result['id']?>" >DELETE</button></form></td>
+       
         <tr>
            
         <?php } ?>
