@@ -1,5 +1,7 @@
 <?php
-require 'Init.php';
+session_start();
+//require 'Init.php';
+include 'autoloader.php';
 
 //require 'functions.php';
 $connection = new Database();

@@ -8,22 +8,21 @@
 </head>
 <body>
    <?php include "header.php"; ?>
-<!-- Lista forma 
- je upisan na listu!!! </br>
-!-->
-<form action="/index.php" method="post">
-IME:
-<input type="text" id="fname" name="fname" placeholder="Ime" ></br>
-PREZIME:    
-<input type="text" id="lname" name="lname" placeholder="Prezime" ><br>
-SPOL:    
-<input type="radio" name="spol" id="spol" value="M">
-<label for="spol">Muško</label>
 
-<input type="radio" name="spol" id="spol" value="Ž">
-<label for="spol">Žensko</label></br>
-    <input type="submit" name="submit" value="Prijavi">
-    <a href="list.view.php">Prikaz liste</a>
+<h1>Insert guest</h1>
+<form action="/index.php" method="post">
+FIRST NAME:
+<input type="text" id="fname" name="fname" placeholder="First name" ></br>
+LAST NAME:    
+<input type="text" id="lname" name="lname" placeholder="Last name" ><br>
+GENDER:    
+<input type="radio" name="gender" id="gender" value="M">
+<label for="spol">Male</label>
+
+<input type="radio" name="gender" id="gender" value="W">
+<label for="gender">Female</label></br>
+    <input type="submit" name="submit" value="Submit">
+    <a href="list.view.php">Show list</a>
 </form>
 <hr>
 

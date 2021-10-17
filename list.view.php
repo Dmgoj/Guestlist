@@ -16,7 +16,7 @@ if(!isset($_SESSION['user'])){
     <title>Guest list</title>
 </head>
 <body>
-
+<h1>Guest List</h1>
    
    <table>
        
@@ -28,8 +28,9 @@ if(!isset($_SESSION['user'])){
         <td><?php echo $result['last_name']; ?></td>
         <td><?php echo $result['sex']; ?></td>
         <td><?php echo $result['date']; ?></td> 
-        <td><form action="index.php" method="post"><button type="submit" name="delete" value="<?=$result['id']?>" >DELETE</button></form></td>
-       
+        <td><form action="index.php" method="post"><button type="submit" name="delete" value="<?=$result['id']?>" >DELETE</button><input type="checkbox" name="del_checkbox"></td>
+        
+        </form>
         <tr>
            
         <?php } ?>

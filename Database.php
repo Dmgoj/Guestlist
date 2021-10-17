@@ -26,9 +26,9 @@ function insertToDb(){
 
         $firstname=filter_var($_POST['fname'],FILTER_SANITIZE_STRING);
         $lastname=filter_var($_POST['lname'],FILTER_SANITIZE_STRING);
-        $spol=$_POST['spol'];
+        $gender=$_POST['gender'];
         
-        $this->pdo->query("INSERT INTO guestlist (first_name, last_name, sex) VALUES ('$firstname', '$lastname', '$spol')");
+        $this->pdo->query("INSERT INTO guestlist (first_name, last_name, sex) VALUES ('$firstname', '$lastname', '$gender')");
         
         // Redirect to View List
         header("Location:list.view.php");

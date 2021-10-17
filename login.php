@@ -8,7 +8,7 @@
 </head>
 <body>
 <?php include "header.php";?>
-
+<h1>Login</h1>
 
 <form action="index.php" method="post">
         <label for="email">Email:</label>
